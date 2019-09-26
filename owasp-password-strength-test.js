@@ -1,6 +1,6 @@
 /* globals define */
 (function (root, factory) {
-  
+
   if (typeof define === 'function' && define.amd) {
     define([], factory);
   } else if (typeof exports === 'object') {
@@ -103,6 +103,16 @@
 
       ],
     };
+
+      owasp.possibleErrors = [
+        owasp.tests.required[0](''),
+        owasp.tests.required[1](new Array(owasp.configs.maxLength + 1).join('a')),
+        owasp.tests.required[2]('aaa'),
+        owasp.tests.optional[0]('A'),
+        owasp.tests.optional[1]('a'),
+        owasp.tests.optional[2]('a'),
+        owasp.tests.optional[3]('a'),
+      ];
 
     // This method tests password strength
     owasp.test = function(password) {
