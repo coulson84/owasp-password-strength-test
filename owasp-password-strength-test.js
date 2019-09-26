@@ -120,7 +120,7 @@
         optionalTestsPassed : 0,
         possibleErrors: [
           owasp.tests.required[0](''),
-          owasp.tests.required[1](new Array(owasp.configs.maxLength + 1).join('a')),
+          owasp.tests.required[1](new Array(owasp.configs.maxLength + 2).join('a')),
           owasp.tests.required[2]('aaa'),
           owasp.tests.optional[0]('A'),
           owasp.tests.optional[1]('a'),
